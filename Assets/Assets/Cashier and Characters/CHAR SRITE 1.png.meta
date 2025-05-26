@@ -1,0 +1,481 @@
+fileFormatVersion: 2
+guid: 585b41ea5894e50478ba7e972055ab43
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -4182539254090099548
+    second: CHAR SRITE 1_0
+  - first:
+      213: -6003669989668830188
+    second: CHAR SRITE 1_1
+  - first:
+      213: 4656019827399012191
+    second: CHAR SRITE 1_2
+  - first:
+      213: -3027067304799671791
+    second: CHAR SRITE 1_3
+  - first:
+      213: -184765695766480551
+    second: CHAR SRITE 1_4
+  - first:
+      213: 6563927772431464100
+    second: CHAR SRITE 1_5
+  - first:
+      213: 7860513927101505171
+    second: CHAR SRITE 1_6
+  - first:
+      213: 480565039824276646
+    second: CHAR SRITE 1_7
+  - first:
+      213: -4090173147058359466
+    second: CHAR SRITE 1_8
+  - first:
+      213: 4994507278514477771
+    second: CHAR SRITE 1_9
+  - first:
+      213: -2494392741699737940
+    second: CHAR SRITE 1_10
+  - first:
+      213: -1231092068407439508
+    second: CHAR SRITE 1_11
+  - first:
+      213: -221642033797273097
+    second: CHAR SRITE 1_12
+  - first:
+      213: 626255255665574758
+    second: CHAR SRITE 1_13
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: CHAR SRITE 1_0
+      rect:
+        serializedVersion: 2
+        x: 139
+        y: 1283
+        width: 1025
+        height: 1048
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e5ddec3b855c1b04480ec874fef23876
+      internalID: 1467248245
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CHAR SRITE 1_1
+      rect:
+        serializedVersion: 2
+        x: 1390
+        y: 1250
+        width: 511
+        height: 1055
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a6f56ba1a6684aa4ab84545f750d7334
+      internalID: 2056520445
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CHAR SRITE 1_2
+      rect:
+        serializedVersion: 2
+        x: 2255
+        y: 1250
+        width: 513
+        height: 1055
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bd9f79cb8b65a0d44912ae82b5282df5
+      internalID: -142177288
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CHAR SRITE 1_3
+      rect:
+        serializedVersion: 2
+        x: 3090
+        y: 1270
+        width: 511
+        height: 1054
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6c964e17551c94d4da8e99a32bf1aeca
+      internalID: -470898248
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CHAR SRITE 1_4
+      rect:
+        serializedVersion: 2
+        x: 3954
+        y: 1270
+        width: 511
+        height: 1054
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c763714ce24abc748807d646fd0ea5ad
+      internalID: 1760220437
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CHAR SRITE 1_5
+      rect:
+        serializedVersion: 2
+        x: 4839
+        y: 1292
+        width: 753
+        height: 990
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aeba5c8a1af03cd4782df30cf40f986a
+      internalID: -1465249873
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CHAR SRITE 1_6
+      rect:
+        serializedVersion: 2
+        x: 5782
+        y: 1292
+        width: 753
+        height: 956
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b1aab86b596c88e479e7eedb7cc56f23
+      internalID: -1498286058
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CHAR SRITE 1_7
+      rect:
+        serializedVersion: 2
+        x: 139
+        y: 100
+        width: 1025
+        height: 1048
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c12c35a43c2c48b439c2d0fe3490be93
+      internalID: -1159574669
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CHAR SRITE 1_8
+      rect:
+        serializedVersion: 2
+        x: 1390
+        y: 64
+        width: 511
+        height: 1055
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0dc9f2e753ecc2044a6e872e27358334
+      internalID: -1188756621
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CHAR SRITE 1_9
+      rect:
+        serializedVersion: 2
+        x: 2255
+        y: 64
+        width: 513
+        height: 1055
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 76e20730a4f5a7d49bd4d60e29af2086
+      internalID: -228826458
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CHAR SRITE 1_10
+      rect:
+        serializedVersion: 2
+        x: 3090
+        y: 84
+        width: 511
+        height: 1054
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2175d9f79ea0a2244b717b33cf982044
+      internalID: 1832935819
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CHAR SRITE 1_11
+      rect:
+        serializedVersion: 2
+        x: 3954
+        y: 84
+        width: 511
+        height: 1054
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bd87c6fb8bc1a0c4bb07da026e25c604
+      internalID: 1770300966
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CHAR SRITE 1_12
+      rect:
+        serializedVersion: 2
+        x: 4839
+        y: 84
+        width: 753
+        height: 1015
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a3dede8bccee9ad41a0e0cd74eb7cbce
+      internalID: -833857
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CHAR SRITE 1_13
+      rect:
+        serializedVersion: 2
+        x: 5792
+        y: 84
+        width: 753
+        height: 1025
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 935398ebc0bf4fc44bc8ae3a34116938
+      internalID: -1887181010
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 9de0a6bd8cf6b6a448ab76179167646a
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      CHAR SRITE 1_0: 1467248245
+      CHAR SRITE 1_1: 2056520445
+      CHAR SRITE 1_10: 1832935819
+      CHAR SRITE 1_11: 1770300966
+      CHAR SRITE 1_12: -833857
+      CHAR SRITE 1_13: -1887181010
+      CHAR SRITE 1_2: -142177288
+      CHAR SRITE 1_3: -470898248
+      CHAR SRITE 1_4: 1760220437
+      CHAR SRITE 1_5: -1465249873
+      CHAR SRITE 1_6: -1498286058
+      CHAR SRITE 1_7: -1159574669
+      CHAR SRITE 1_8: -1188756621
+      CHAR SRITE 1_9: -228826458
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

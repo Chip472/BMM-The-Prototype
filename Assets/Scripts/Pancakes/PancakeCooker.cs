@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -11,7 +12,7 @@ public class PancakeCooker : MonoBehaviour
     public Sprite burntSprite;
 
     public float cookSpeed = 20f; // Increase per second
-    private bool isCooking = true;
+    private bool isCooking = false;
 
     private SpriteRenderer pancakeSpr;
 
@@ -23,10 +24,22 @@ public class PancakeCooker : MonoBehaviour
     public SpriteRenderer[] nextPancakes;
     public SpriteRenderer[] miniPancakes;
 
+    public GameObject fire;
+
     void Start()
     {
         pancakeSpr = pancake.GetComponent<SpriteRenderer>();
         cookSlider.value = 0;
+        PlayerPrefs.SetInt("cookedPancake", 0);
+
+        StartCoroutine(DelayStartFlip());
+    }
+
+    IEnumerator DelayStartFlip()
+    {
+        yield return new WaitForSeconds(1.5f);
+        fire.SetActive(true);
+        isCooking = true;
     }
 
     void Update()
@@ -77,7 +90,7 @@ public class PancakeCooker : MonoBehaviour
         if (count < 2)
         {
             cookSlider.value = 0;
-            pancakeSpr.sprite = uncookedSprite;
+            //pancakeSpr.sprite = uncookedSprite;
         }
         else if (count == 2)
         {

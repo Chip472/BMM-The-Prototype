@@ -31,4 +31,5 @@ public class IngredientTransition : MonoBehaviour
         ingredient[0].GetComponent<DragAndDropScaleScript>().enabled = true;
         ingredient[3].GetComponent<DragAndDropScaleScript>().enabled = true;
     }
+
 }

@@ -1,5 +1,6 @@
 using System.Collections;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PancakeManager2 : MonoBehaviour
 {
@@ -18,6 +19,8 @@ public class PancakeManager2 : MonoBehaviour
     public GameObject drawingPad;
     public Texture2D wandCursor;
     public GameObject kirakira;
+
+    public Animator transition;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -81,5 +84,20 @@ public class PancakeManager2 : MonoBehaviour
     public void ChangeToStep2()
     {
         decorAnim.SetBool("step2", true);
+    }
+
+    public void ChangeToDream()
+    {
+        StartCoroutine(DelayTransi());
+    }
+
+    IEnumerator DelayTransi()
+    {
+        transition.gameObject.SetActive(true);
+        transition.SetBool("transi", true);
+
+        yield return new WaitForSeconds(1.5f);
+
+        SceneManager.LoadScene("Chapter1Dream");
     }
 }
