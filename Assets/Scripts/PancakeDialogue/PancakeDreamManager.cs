@@ -36,7 +36,7 @@ public class PancakeDreamManager : MonoBehaviour
         GetComponent<PancakeGoodDream>().enabled = false;
         GetComponent<PancakeBadDream>().enabled = false;
 
-        if (PlayerPrefs.GetFloat("chap1Score", 0) >= 4.5f)
+        if (PlayerPrefs.GetFloat("chap1Score", 0) >= 4.0f)
         {
             goodDialogue.SetActive(true);
         }
