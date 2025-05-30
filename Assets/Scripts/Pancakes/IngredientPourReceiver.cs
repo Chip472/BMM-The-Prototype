@@ -65,6 +65,11 @@ public class IngredientPourReceiver : MonoBehaviour
         animator.speed = 0f;
         if (manager != null && !string.IsNullOrEmpty(onCompleteMethod))
         {
+            if (currentWeight < requiredWeight - 10f || currentWeight > requiredWeight + 10f)
+            {
+                PlayerPrefs.SetFloat("chap1Score", PlayerPrefs.GetFloat("chap1Score", 0) - 0.1f);
+            }
+
             Debug.Log("Done");
             Debug.Log(currentWeight);
             manager.Invoke(onCompleteMethod, 0f);

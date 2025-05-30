@@ -73,6 +73,7 @@ public class PancakeCooker : MonoBehaviour
         if (value < 60f)
         {
             pancakeSpr.sprite = uncookedSprite;
+            PlayerPrefs.SetFloat("chap1Score", PlayerPrefs.GetFloat("chap1Score", 0) - 0.1f);
         }
         else if (value <= 75f)
         {
@@ -81,6 +82,7 @@ public class PancakeCooker : MonoBehaviour
         else
         {
             pancakeSpr.sprite = burntSprite;
+            PlayerPrefs.SetFloat("chap1Score", PlayerPrefs.GetFloat("chap1Score", 0) - 0.1f);
         }
     }
 
