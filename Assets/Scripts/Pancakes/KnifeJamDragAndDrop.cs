@@ -21,6 +21,8 @@ public class KnifeJamDragAndDrop : MonoBehaviour
 
     public PancakeManager2 manager;
 
+    public AudioSource knifeSound, jam1Sound, jam2Sound;
+
     private void Start()
     {
         originalPosition = transform.localPosition;
@@ -29,6 +31,7 @@ public class KnifeJamDragAndDrop : MonoBehaviour
 
     private void OnMouseDown()
     {
+        knifeSound.Play();
         isDragging = true;
         shadow.SetActive(false);
         gameObject.GetComponent<SpriteRenderer>().sortingLayerName = "DraggingItem";
@@ -51,6 +54,7 @@ public class KnifeJamDragAndDrop : MonoBehaviour
                 {
                     check = true;
                     jamOnKnife.SetActive(true);
+                    jam1Sound.Play();
                     gameObject.GetComponent<SpriteRenderer>().sortingOrder = 3;
                     jamOnKnife.GetComponent<SpriteRenderer>().sortingOrder = 4;
                 }
@@ -73,6 +77,7 @@ public class KnifeJamDragAndDrop : MonoBehaviour
         {
             if (jamOnKnife.activeSelf && hit.CompareTag(bowlTag))
             {
+                jam2Sound.Play();
                 jamOnKnife.SetActive(false);
                 ingredientInBowl.SetActive(true);
 

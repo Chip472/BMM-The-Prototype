@@ -10,6 +10,9 @@ public class FromMixtureToPan : MonoBehaviour
     public GameObject firstP, secondP;
     public GameObject firstC, secondC;
 
+    public WhiskScript whiskObj;
+    public AudioSource whiskSFX;
+
     public void ChangeScene(string sceneName)
     {
         SceneManager.LoadScene(sceneName);
@@ -31,6 +34,8 @@ public class FromMixtureToPan : MonoBehaviour
 
         if (ingredientAnim != null && bowlAnim != null)
         {
+            whiskObj.isDone = true;
+            whiskSFX.Stop();
             ingredientAnim.SetBool("final", true);
             bowlAnim.SetBool("final", true);
         }

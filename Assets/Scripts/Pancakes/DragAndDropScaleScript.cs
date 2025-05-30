@@ -17,6 +17,8 @@ public class DragAndDropScaleScript : MonoBehaviour
     public Animator bowlNscaleAnim;
     public IngredientPourReceiver receiver;
 
+    public AudioSource ingreSound;
+
     void Awake()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
@@ -35,6 +37,7 @@ public class DragAndDropScaleScript : MonoBehaviour
 
     void OnMouseDown()
     {
+        ingreSound.Play();
         if (bowlNscaleAnim != null)
         {
             bowlNscaleAnim.SetBool("isMeasuring", true);
@@ -68,6 +71,7 @@ public class DragAndDropScaleScript : MonoBehaviour
 
     void OnMouseUp()
     {
+        ingreSound.Stop();
         // Try to proceed only if enough weight was poured
         if (receiver.currentWeight >= receiver.requiredWeight - 10f)
         {

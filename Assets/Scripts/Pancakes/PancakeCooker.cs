@@ -25,6 +25,9 @@ public class PancakeCooker : MonoBehaviour
     public SpriteRenderer[] miniPancakes;
 
     public GameObject fire;
+    public AudioSource sizzleSFX;
+    public AudioSource flipSFX;
+    public AudioSource pancakFallSFX;
 
     void Start()
     {
@@ -37,8 +40,9 @@ public class PancakeCooker : MonoBehaviour
 
     IEnumerator DelayStartFlip()
     {
-        yield return new WaitForSeconds(1.5f);
+        yield return new WaitForSeconds(3.5f);
         fire.SetActive(true);
+        sizzleSFX.Play();
         isCooking = true;
     }
 
@@ -121,5 +125,15 @@ public class PancakeCooker : MonoBehaviour
             count = 0;
             PlayerPrefs.SetInt("cookedPancake", PlayerPrefs.GetInt("cookedPancake", 0) + 1);
         }
+    }
+
+    public void PlayFlip()
+    {
+        flipSFX.Play();
+    }
+
+    public void PlayPancakeFall()
+    {
+        pancakFallSFX.Play();
     }
 }

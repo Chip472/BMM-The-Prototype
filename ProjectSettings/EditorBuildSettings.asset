@@ -18,6 +18,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Chapter1Dream.unity
     guid: 2e3e629901faa6243aec9f10bc8d01fb
   - enabled: 1
+    path: Assets/Scenes/Chapter2Cashier.unity
+    guid: 1f665edaa4d45e94ca900cef7f557f9f
+  - enabled: 1
     path: Assets/Scenes/ChilidogFirst.unity
     guid: 11c4fb5b07f888b4cab856dbb656df46
   m_configObjects:

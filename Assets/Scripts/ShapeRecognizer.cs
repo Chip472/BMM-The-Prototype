@@ -9,9 +9,11 @@ public class ShapeRecognizer : MonoBehaviour
     public RectTransform drawAreaUI;
     public GameObject gestureLinePrefab;
     public string expectedShape = "circle"; // this should match current gameobject's shape
-    public float accuracyThreshold = 0.8f;
+    public float accuracyThreshold = 0.9f;
 
     public ChantingScript chanting;
+
+    public AudioSource successSFX;
 
     private List<Gesture> trainingSet = new List<Gesture>();
     private List<Point> points = new List<Point>();
@@ -105,10 +107,13 @@ public class ShapeRecognizer : MonoBehaviour
 
         if (result.GestureClass == expectedShape && result.Score >= accuracyThreshold)
         {
+            PlayerPrefs.SetFloat("chap1Score", PlayerPrefs.GetFloat("chap1Score", 0) + result.Score);
+            successSFX.Play();
             chanting.Success();
         }
         else
         {
+            PlayerPrefs.SetFloat("chap1Score", PlayerPrefs.GetFloat("chap1Score", 0) - 0.1f);
             chanting.Fail();
         }
     }

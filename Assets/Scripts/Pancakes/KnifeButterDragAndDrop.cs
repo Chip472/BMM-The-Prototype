@@ -17,6 +17,8 @@ public class KnifeButterDragAndDrop : MonoBehaviour
 
     public Animator decorAnim;
 
+    public AudioSource knifeSFX, butter1SFX, butter2SFX;
+
     private void Start()
     {
         originalPosition = transform.localPosition;
@@ -25,6 +27,7 @@ public class KnifeButterDragAndDrop : MonoBehaviour
 
     private void OnMouseDown()
     {
+        knifeSFX.Play();
         isDragging = true;
         shadow.SetActive(false);
         gameObject.GetComponent<SpriteRenderer>().sortingLayerName = "DraggingItem";
@@ -48,6 +51,8 @@ public class KnifeButterDragAndDrop : MonoBehaviour
                 {
                     check = true;
                     butterOnKnife1.SetActive(true);
+                    butter1SFX.Play();
+
                     gameObject.GetComponent<SpriteRenderer>().sortingOrder = 3;
                     butterOnKnife1.GetComponent<SpriteRenderer>().sortingOrder = 4;
                     butterOnKnife2.GetComponent<SpriteRenderer>().sortingOrder = 5;
@@ -72,6 +77,7 @@ public class KnifeButterDragAndDrop : MonoBehaviour
         {
             if (butterOnKnife1.activeSelf && hit.CompareTag(bowlTag))
             {
+                butter2SFX.Play();
                 butterOnKnife1.SetActive(false);
                 ingredientInBowl.SetActive(true);
 

@@ -14,6 +14,9 @@ public class WhiskScript : MonoBehaviour
     private Vector3 offset;
     private bool isOverBowl = false;
 
+    public AudioSource ingreSound;
+    public bool isDone = false;
+
     private void Start()
     {
         originalPosition = transform.localPosition;
@@ -26,9 +29,11 @@ public class WhiskScript : MonoBehaviour
             mixtureAnimator.speed = 0f;    // Pause at start
         }
     }
+    
 
     private void OnMouseDown()
     {
+        ingreSound.Play();
         shadow.SetActive(false);
         isDragging = true;
         offset = transform.position - GetMouseWorldPos();
@@ -45,6 +50,7 @@ public class WhiskScript : MonoBehaviour
 
     private void OnMouseUp()
     {
+        ingreSound.Stop();
         shadow.SetActive(true);
         isDragging = false;
         transform.localPosition = originalPosition;
@@ -65,6 +71,12 @@ public class WhiskScript : MonoBehaviour
             {
                 mixtureAnimator.speed = 0f;
             }
+        }
+
+        if (isDone)
+        {
+            transform.localPosition = originalPosition;
+            transform.localRotation = originalRotation;
         }
     }
 

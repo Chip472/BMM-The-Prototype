@@ -96,10 +96,24 @@ public class ChantingScript : MonoBehaviour
         overlay.SetActive(true);
     }
 
+    bool check = false;
     public void Success()
     {
         // Play success animation and proceed
+        if (!check)
+        {
+            check = true;
+            GetComponent<PancakeManager2>().cookIntro.NextLine();
+            StartCoroutine(WaitForDialogue());
+        }
+
         StartCoroutine(SuccessRoutine());
+    }
+
+    IEnumerator WaitForDialogue()
+    {
+        yield return new WaitForSeconds(4f);
+        GetComponent<PancakeManager2>().cookIntro.NextLine();
     }
 
     IEnumerator SuccessRoutine()

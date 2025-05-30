@@ -58,7 +58,10 @@ public class BluebwwyDragAndDrop : MonoBehaviour
             if (hit.CompareTag(bowlTag))
             {
                 if (ingredientInBowl != null)
+                {
                     ingredientInBowl.SetActive(true);
+                    GetComponent<AudioSource>().Play();
+                }
 
                 Destroy(gameObject);
                 return;

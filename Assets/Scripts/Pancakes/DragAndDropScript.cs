@@ -14,6 +14,8 @@ public class DragAndDropScript : MonoBehaviour
 
     public bool isInactiveAfterUsed = false;
 
+    public AudioSource ingreSound;
+
     private void Start()
     {
         originalPosition = transform.localPosition;
@@ -54,6 +56,7 @@ public class DragAndDropScript : MonoBehaviour
         {
             if (hit.CompareTag(bowlTag))
             {
+                ingreSound.Play();
                 ingredientInBowl.SetActive(true);
                 if (isInactiveAfterUsed)
                 {

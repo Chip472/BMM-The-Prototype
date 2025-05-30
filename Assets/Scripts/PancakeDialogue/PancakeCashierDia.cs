@@ -153,16 +153,16 @@ public class PancakeCashierDia : MonoBehaviour
         {
             bobAnim.Play("BobAppear", 0);
         }
-        else if (index == 11)
+        else if (index == 12)
         {
             flashback.SetActive(true);
         }
-        else if (index == 14)
+        else if (index == 15)
         {
             textComponent.text = string.Empty;
             textComponent = textJittered;
         }
-        else if (index == 15)
+        else if (index == 16)
         {
             flashback.SetActive(false);
             textComponent.text = string.Empty;
@@ -221,5 +221,10 @@ public class PancakeCashierDia : MonoBehaviour
     public void SkipDialogue()
     {
         StartCoroutine(DelayEndScene());
+    }
+
+    private void OnApplicationQuit()
+    {
+        PlayerPrefs.SetString("isStillInGame", "false");
     }
 }

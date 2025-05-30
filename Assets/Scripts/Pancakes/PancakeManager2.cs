@@ -22,10 +22,13 @@ public class PancakeManager2 : MonoBehaviour
 
     public Animator transition;
 
+    public CookIntro2 cookIntro;
+
+    public AudioSource sizzleSFX;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
@@ -34,6 +37,7 @@ public class PancakeManager2 : MonoBehaviour
         if (!check && PlayerPrefs.GetInt("cookedPancake", 0) == 3)
         {
             check = true;
+            sizzleSFX.Stop();
             chaobep.GetComponent<Animator>().speed = 0;
             chaobep.GetComponent<PancakeCooker>().enabled = false;
             StartCoroutine(DelayChangeScene());
@@ -60,7 +64,8 @@ public class PancakeManager2 : MonoBehaviour
 
     IEnumerator DelaySceneChant()
     {
-        yield return new WaitForSeconds(2.5f);
+        cookIntro.NextLine();
+        yield return new WaitForSeconds(3f);
 
         drawingPad.SetActive(true);
         gameObject.GetComponent<ChantingScript>().enabled = true;
@@ -77,6 +82,9 @@ public class PancakeManager2 : MonoBehaviour
         chaobep.SetActive(false);
         uiNuongBanh.SetActive(false);
 
+        cookIntro.textbox.SetActive(true);
+        cookIntro.NextLine();
+
         doTrangTri.SetActive(true);
         finalDish.SetActive(true);
     }
@@ -84,20 +92,26 @@ public class PancakeManager2 : MonoBehaviour
     public void ChangeToStep2()
     {
         decorAnim.SetBool("step2", true);
+        cookIntro.NextLine();
     }
 
     public void ChangeToDream()
     {
+        Debug.Log(PlayerPrefs.GetFloat("chap1Score"));
         StartCoroutine(DelayTransi());
     }
 
     IEnumerator DelayTransi()
     {
         transition.gameObject.SetActive(true);
-        transition.SetBool("transi", true);
+        transition.Play("TransitionIn", 0);
 
         yield return new WaitForSeconds(1.5f);
 
         SceneManager.LoadScene("Chapter1Dream");
+    }
+    private void OnApplicationQuit()
+    {
+        PlayerPrefs.SetString("isStillInGame", "false");
     }
 }

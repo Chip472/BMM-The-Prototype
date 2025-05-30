@@ -18,12 +18,16 @@ public class PancakeManager : MonoBehaviour
     bool check = false;
     bool isDoneDia = false;
 
+    public AudioSource flourSFX, milkSFX;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         isFlour = true;
         ingredientAnim.speed = 0;
         bowlAnim.speed = 0;
+
+        PlayerPrefs.SetFloat("chap1Score", 0);
     }
 
     // Update is called once per frame
@@ -58,6 +62,7 @@ public class PancakeManager : MonoBehaviour
             cookIntro.NextLine();
         }
 
+        flourSFX.Stop();
         triggerFlour.SetActive(false);
         ingredientAnim.SetBool("step2", true);
     }
@@ -81,6 +86,12 @@ public class PancakeManager : MonoBehaviour
             cookIntro.NextLine();
         }
 
+        milkSFX.Stop();
         ingredientAnim.SetBool("step4", true);
+    }
+
+    private void OnApplicationQuit()
+    {
+        PlayerPrefs.SetString("isStillInGame", "false");
     }
 }

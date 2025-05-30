@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class CookIntro : MonoBehaviour
 {
     [SerializeField] private GameObject textbox;
+    [SerializeField] private GameObject textboxTutor;
     [SerializeField] private TextMeshProUGUI textComponent;
     [SerializeField] private TextMeshProUGUI textTutComponent;
     [SerializeField] private string[] lines;
@@ -115,7 +116,7 @@ public class CookIntro : MonoBehaviour
         {
             witchImg.gameObject.SetActive(false);
             textbox.SetActive(false);
-            textTutComponent.gameObject.SetActive(true);
+            textboxTutor.SetActive(true);
             textSpeed = 0.01f;
 
             textComponent = textTutComponent;
