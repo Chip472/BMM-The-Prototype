@@ -447,7 +447,7 @@ MonoBehaviour:
     othersToHide: {fileID: 0}
     lineText: "Ch\u1EC9 m\u1ED9t \u0111\xEAm th\xF4i,"
   - speakerName: '- Evelyn -'
-    characterSprite: {fileID: -773426343002410382, guid: 15f559cc5a2d4a64a98df2b0556c6282, type: 3}
+    characterSprite: {fileID: 7207358236024738276, guid: 15f559cc5a2d4a64a98df2b0556c6282, type: 3}
     characterImg: {fileID: 8491777832180615431}
     characterObject: {fileID: 0}
     othersToHide: {fileID: 0}
