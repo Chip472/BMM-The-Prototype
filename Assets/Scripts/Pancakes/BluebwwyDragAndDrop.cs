@@ -60,7 +60,10 @@ public class BluebwwyDragAndDrop : MonoBehaviour
                 if (ingredientInBowl != null)
                 {
                     ingredientInBowl.SetActive(true);
-                    GetComponent<AudioSource>().Play();
+                    if (GetComponent<AudioSource>() != null){
+
+                        GetComponent<AudioSource>().Play();
+                    }
                 }
 
                 Destroy(gameObject);

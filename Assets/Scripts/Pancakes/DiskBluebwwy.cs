@@ -3,9 +3,6 @@ using UnityEngine;
 public class DiskBluebwwy : MonoBehaviour
 {
     public GameObject blueberryPrefab1;
-
-    public Animator decorAnim;
-
     public Transform blueberryParent;
 
     public GameObject blue1;

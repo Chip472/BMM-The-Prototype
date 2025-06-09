@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.UI;
 
 public class SpatulaOnionScript : MonoBehaviour
 {
@@ -10,7 +11,7 @@ public class SpatulaOnionScript : MonoBehaviour
 
     public Animator fryingAnim;
 
-    public GameObject oilBottle, oilCollider, spiceCollider;
+    public GameObject oilBottle, oilCollider;
 
     private Vector3 offset;
     private Vector3 originalPosition;
@@ -18,8 +19,10 @@ public class SpatulaOnionScript : MonoBehaviour
     private bool isOverlappingBowl = false;
     private bool stepStarted = false;
 
+    public ChiliDogTutor tutorText;
     private void Awake()
     {
+        tutorText.NextLine();
         originalPosition = transform.localPosition;
 
         onionAnimators = new Animator[onionObjects.Length];
@@ -83,8 +86,13 @@ public class SpatulaOnionScript : MonoBehaviour
         }
     }
 
+    private float currentAnimSpeed = -1f;
+
     private void SetOnionAnimatorsSpeed(float speed)
     {
+        if (Mathf.Approximately(currentAnimSpeed, speed)) return; // Avoid unnecessary changes
+        currentAnimSpeed = speed;
+
         foreach (var animator in onionAnimators)
         {
             if (animator != null)
@@ -108,14 +116,30 @@ public class SpatulaOnionScript : MonoBehaviour
 
     private void ProceedToNextStep()
     {
+        // Snap spatula back to original position and cancel dragging
+        isDragging = false;
         transform.localPosition = originalPosition;
 
+        // Disable oil step, enable spice
         oilBottle.SetActive(false);
         oilCollider.SetActive(false);
-        spiceCollider.SetActive(true);
 
+        // Play frying animation
         fryingAnim.SetBool("step3", true);
+
+        // Disable onion colliders to prevent re-triggering
+        for (int i = 0; i < onionObjects.Length; i++)
+        {
+            if (onionObjects[i] != null)
+            {
+                onionObjects[i].GetComponent<Collider2D>().enabled = false;
+                onionObjects[i].GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Static;
+                SetOnionAnimatorsSpeed(1f);
+            }
+        }
     }
+
+
 
     private Vector3 GetMouseWorldPos()
     {

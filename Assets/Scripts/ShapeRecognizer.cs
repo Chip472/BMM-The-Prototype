@@ -22,6 +22,8 @@ public class ShapeRecognizer : MonoBehaviour
     private Vector3 virtualKeyPosition;
     private int vertexCount = 0;
 
+    public string foodName = "pancake";
+
     void Start()
     {
         // Load saved gestures
@@ -107,13 +109,28 @@ public class ShapeRecognizer : MonoBehaviour
 
         if (result.GestureClass == expectedShape && result.Score >= accuracyThreshold)
         {
-            PlayerPrefs.SetFloat("chap1Score", PlayerPrefs.GetFloat("chap1Score", 0) + result.Score);
+            if (foodName == "pancake")
+            {
+                PlayerPrefs.SetFloat("chap1Score", PlayerPrefs.GetFloat("chap1Score", 0) + result.Score);
+            }
+            else if (foodName == "chilidog")
+            {
+                PlayerPrefs.SetFloat("chap2Score", PlayerPrefs.GetFloat("chap2Score", 0) + result.Score);
+            }
             successSFX.Play();
             chanting.Success();
         }
         else
         {
-            PlayerPrefs.SetFloat("chap1Score", PlayerPrefs.GetFloat("chap1Score", 0) - 0.1f);
+            if (foodName == "pancake")
+            {
+                PlayerPrefs.SetFloat("chap1Score", PlayerPrefs.GetFloat("chap1Score", 0) - 0.1f);
+            }
+            else if (foodName == "chilidog")
+            {
+                PlayerPrefs.SetFloat("chap2Score", PlayerPrefs.GetFloat("chap2Score", 0) - 0.1f);
+            }
+
             chanting.Fail();
         }
     }

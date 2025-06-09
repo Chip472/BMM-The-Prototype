@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Bowl
   - Jam
+  - Grinder
   layers:
   - Default
   - TransparentFX

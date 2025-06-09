@@ -3,6 +3,7 @@ using UnityEngine.UI;
 using UnityEngine.Audio;
 using UnityEngine.SceneManagement;
 using System.Collections;
+using UnityEngine.Video;
 
 public class MenuManager : MonoBehaviour
 {
@@ -26,7 +27,11 @@ public class MenuManager : MonoBehaviour
     public Transform plus;
 
     [Header("Prologue and different stuff")]
-    public GameObject prologueVid;
+    public GameObject prologueCanvas;
+    public VideoPlayer prologuePlayer;
+    public GameObject skipButton;
+    public GameObject blackScreen;
+
     public GameObject chapter1Sticku, chapter2Sticku;
     public GameObject letterChap1, letterChap2;
     public GameObject goodEndTextChap1, badEndTextChap1;
@@ -35,14 +40,18 @@ public class MenuManager : MonoBehaviour
     [Header("Sounds")]
     public AudioSource bookSFX;
     public AudioSource letterSFX;
+    public AudioSource menuTheme;
 
     private void Awake()
     {
         if (PlayerPrefs.GetString("isStillInGame", "false") == "true")
         {
-            transiAnim.gameObject.SetActive(false);
             transiAnim = transiAnimInGame;
             transiAnimInGame.gameObject.SetActive(true);
+        }
+        else
+        {
+            prologuePlayer.loopPointReached += OnVideoEnd;
         }
     }
 
@@ -63,7 +72,12 @@ public class MenuManager : MonoBehaviour
 
         if (PlayerPrefs.GetString("isStillInGame", "false") == "true")
         {
-            prologueVid.SetActive(false);
+            menuTheme.Play();
+
+            skipButton.SetActive(false);
+            blackScreen.SetActive(false);
+            prologueCanvas.SetActive(false);
+            prologuePlayer.gameObject.SetActive(false);
 
             if (PlayerPrefs.GetString("isChapter1End", "none") == "happy")
             {
@@ -117,6 +131,27 @@ public class MenuManager : MonoBehaviour
                 chapter2Sticku.GetComponent<Animator>().SetBool("blink", true);
             }
         }
+    }
+    void OnVideoEnd(VideoPlayer vp)
+    {
+        StartCoroutine(DelaySkipPrologue());
+    }
+    public void SkipPrologue()
+    {
+        StartCoroutine(DelaySkipPrologue());
+    }
+
+    IEnumerator DelaySkipPrologue()
+    {
+        prologueCanvas.SetActive(false);
+        prologuePlayer.gameObject.SetActive(false);
+        skipButton.SetActive(false);
+
+        yield return new WaitForSeconds(1f);
+
+        transiAnim.gameObject.SetActive(true);
+        blackScreen.SetActive(false);
+        menuTheme.Play();
     }
 
     // ----- MENU & BOOK -----

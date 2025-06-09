@@ -13,7 +13,7 @@ public class PancakeDreamManager : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Awake()
     {
-        if (PlayerPrefs.GetFloat("chap1Score", 0) >= 4.0f)
+        if (PlayerPrefs.GetFloat("chap1Score", 0) >= 3.5f)
         {
             PlayerPrefs.SetString("isChapter1End", "happy");
             GetComponent<PancakeGoodDream>().enabled = true;
@@ -36,7 +36,7 @@ public class PancakeDreamManager : MonoBehaviour
         GetComponent<PancakeGoodDream>().enabled = false;
         GetComponent<PancakeBadDream>().enabled = false;
 
-        if (PlayerPrefs.GetFloat("chap1Score", 0) >= 4.0f)
+        if (PlayerPrefs.GetFloat("chap1Score", 0) >= 3.5f)
         {
             goodDialogue.SetActive(true);
         }

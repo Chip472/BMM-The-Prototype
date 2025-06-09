@@ -15,7 +15,6 @@ public class KnifeCuttingController : MonoBehaviour
     public GameObject[] onion2CutStages; // 0: full, 1~5: each slice
     public GameObject[] onion3CutStages;
 
-    public GameObject[] sausageCutStages; // 0: full, 1~4: each slice
     public int phrase = 0;
 
     public Animator arrowAnim;
@@ -26,6 +25,7 @@ public class KnifeCuttingController : MonoBehaviour
     private bool isDragging = false;
     private int currentCutStep = 0;
 
+    public AudioSource knifeSFX;
     private void Start()
     {
         ShowNextArrow();
@@ -85,6 +85,8 @@ public class KnifeCuttingController : MonoBehaviour
     {
         if (phrase == 0 && currentCutStep < onionCutStages.Length - 1)
         {
+            knifeSFX.Play();
+
             onionCutStages[currentCutStep].SetActive(false);
             onion2CutStages[currentCutStep].SetActive(true);
             currentCutStep++;
@@ -101,6 +103,8 @@ public class KnifeCuttingController : MonoBehaviour
         }
         else if (phrase == 1 && currentCutStep < onion2CutStages.Length)
         {
+            knifeSFX.Play();
+
             onion2CutStages[currentCutStep].SetActive(false);
             onion3CutStages[currentCutStep].SetActive(true);
             currentCutStep++;
@@ -117,13 +121,6 @@ public class KnifeCuttingController : MonoBehaviour
 
             ShowNextArrow();
         }
-        else if (phrase == 2 && currentCutStep < sausageCutStages.Length - 1)
-        {
-            sausageCutStages[currentCutStep].SetActive(false);
-            currentCutStep++;
-            sausageCutStages[currentCutStep].SetActive(true);
-            ShowNextArrow();
-        }
     }
 
     IEnumerator DelayOutro()
@@ -135,6 +132,8 @@ public class KnifeCuttingController : MonoBehaviour
         yield return new WaitForSeconds(2f);
         fryingScene.SetActive(true);
         gameObject.SetActive(false);
+
+        fryingScene.GetComponent<Animator>().Play("FryingStep0",0);
     }
 
     void ShowNextArrow()

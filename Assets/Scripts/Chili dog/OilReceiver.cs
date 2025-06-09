@@ -16,6 +16,11 @@ public class OilReceiver : MonoBehaviour
     public OilReceiver otherSpice;
     public bool isReady = false;
 
+    public GameObject onions;
+
+    public AudioSource sizzleSFX;
+    bool isPoured = false;
+
     private void Awake()
     {
         if (animatedSpriteObject != null)
@@ -42,10 +47,23 @@ public class OilReceiver : MonoBehaviour
                 ProceedToNextStep();
             }
         }
+
+        if (isPoured)
+        {
+            isPoured = false;
+            sizzleSFX.Play();
+        }
     }
+
+    bool check = false;
 
     private void OnParticleCollision(GameObject other)
     {
+        if (!check)
+        {
+            check = true;
+            isPoured = true;
+        }
         isReceivingParticles = true;
 
         if (!animatedSpriteObject.activeSelf)
@@ -72,6 +90,7 @@ public class OilReceiver : MonoBehaviour
         if (switchIng == 0 && otherSpice == null) //oil
         {
             fryingAnim.SetBool("step2", true);
+            onions.SetActive(true);
             oilBottle.ForceReset();
         }
         else

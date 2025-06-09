@@ -8,7 +8,6 @@ public class DragAndDropOil : MonoBehaviour
 
     private Sprite originalSprite;
     private SpriteRenderer spriteRenderer;
-    private Rigidbody2D rb;
 
     private bool isDragging = false;
     private Vector3 offset;
@@ -19,7 +18,6 @@ public class DragAndDropOil : MonoBehaviour
     void Awake()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
-        rb = GetComponent<Rigidbody2D>();
 
         originalSprite = spriteRenderer.sprite;
         originalPosition = transform.localPosition;
@@ -37,9 +35,6 @@ public class DragAndDropOil : MonoBehaviour
 
         isDragging = true;
         offset = transform.position - GetMouseWorldPos();
-
-        rb.linearVelocity = Vector2.zero;
-        rb.bodyType = RigidbodyType2D.Kinematic;
 
         spriteRenderer.sortingLayerName = "DraggingItem";
         spriteRenderer.sprite = dragSprite;
@@ -67,7 +62,6 @@ public class DragAndDropOil : MonoBehaviour
     {
 
         isDragging = false;
-        rb.bodyType = RigidbodyType2D.Dynamic;
 
         spriteRenderer.sortingLayerName = "Default";
         spriteRenderer.sprite = originalSprite;
@@ -81,7 +75,6 @@ public class DragAndDropOil : MonoBehaviour
                 ps.Stop(true, ParticleSystemStopBehavior.StopEmittingAndClear);
 
         transform.localPosition = originalPosition;
-        rb.linearVelocity = Vector2.zero;
     }
 
     private Vector3 GetMouseWorldPos()
@@ -102,8 +95,8 @@ public class DragAndDropOil : MonoBehaviour
     }
     public void ForceReset()
     {
+        GetComponent<Collider2D>().enabled = false;
         isDragging = false;
-        rb.bodyType = RigidbodyType2D.Dynamic;
 
         spriteRenderer.sortingLayerName = "Default";
         spriteRenderer.sprite = originalSprite;
@@ -117,7 +110,6 @@ public class DragAndDropOil : MonoBehaviour
                 ps.Stop(true, ParticleSystemStopBehavior.StopEmittingAndClear);
 
         transform.localPosition = originalPosition;
-        rb.linearVelocity = Vector2.zero;
     }
 
 }

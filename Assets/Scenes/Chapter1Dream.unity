@@ -1156,14 +1156,14 @@ MonoBehaviour:
       ph\xF9 th\u1EE7y nh\u1ECF v\u1EDBi \xE1nh m\u1EAFt l\u1EB7ng l\u1EBD nh\u01B0ng
       ng\u1EADp tr\xE0n hy v\u1ECDng.</i>"
   - speakerName: '- Bob -'
-    characterSprite: {fileID: -1465249873, guid: 585b41ea5894e50478ba7e972055ab43, type: 3}
+    characterSprite: {fileID: 4359006072143136779, guid: 15f559cc5a2d4a64a98df2b0556c6282, type: 3}
     characterImg: {fileID: 8216898011212056449}
     characterObject: {fileID: 4373584466638120958}
     othersToHide: {fileID: 0}
     lineText: "Chuy\u1EBFn t\xE0u \u0111\xE3 \u0111i, nh\u01B0ng l\xF2ng t\xF4i kh\xF4ng
       c\xF2n \u1EDF l\u1EA1i n\u01A1i s\xE2n ga n\u1EEFa."
   - speakerName: '- Bob -'
-    characterSprite: {fileID: -833857, guid: 585b41ea5894e50478ba7e972055ab43, type: 3}
+    characterSprite: {fileID: 4359006072143136779, guid: 15f559cc5a2d4a64a98df2b0556c6282, type: 3}
     characterImg: {fileID: 8216898011212056449}
     characterObject: {fileID: 0}
     othersToHide: {fileID: 0}
@@ -1231,7 +1231,7 @@ MonoBehaviour:
     lineText: "<i>Bob m\u1EDF m\u1EAFt, \xE1nh m\u1EAFt \u0111\u1EE5c h\u01A1n. \xD4ng
       run r\u1EA9y, th\xEC th\u1EA7m.</i>"
   - speakerName: '- Bob -'
-    characterSprite: {fileID: -1498286058, guid: 585b41ea5894e50478ba7e972055ab43, type: 3}
+    characterSprite: {fileID: 994891205180393040, guid: 15f559cc5a2d4a64a98df2b0556c6282, type: 3}
     characterImg: {fileID: 8216898011212056449}
     characterObject: {fileID: 4373584466638120958}
     othersToHide: {fileID: 0}
@@ -1240,7 +1240,7 @@ MonoBehaviour:
       n\xF3i l\u1EDDi cay nghi\u1EC7t v\u1EDBi ch\xEDnh ng\u01B0\u1EDDi m\xECnh y\xEAu
       th\u01B0\u01A1ng nh\u1EA5t..."
   - speakerName: '- Bob -'
-    characterSprite: {fileID: -1498286058, guid: 585b41ea5894e50478ba7e972055ab43, type: 3}
+    characterSprite: {fileID: 994891205180393040, guid: 15f559cc5a2d4a64a98df2b0556c6282, type: 3}
     characterImg: {fileID: 8216898011212056449}
     characterObject: {fileID: 0}
     othersToHide: {fileID: 0}
@@ -1248,7 +1248,7 @@ MonoBehaviour:
       \u0111\u1EC3 s\u1EEDa ch\u1EEFa. C\xF3 nh\u1EEFng chuy\u1EBFn t\xE0u \u0111i
       l\xE0 kh\xF4ng tr\u1EDF l\u1EA1i."
   - speakerName: '- Bob -'
-    characterSprite: {fileID: -1465249873, guid: 585b41ea5894e50478ba7e972055ab43, type: 3}
+    characterSprite: {fileID: 994891205180393040, guid: 15f559cc5a2d4a64a98df2b0556c6282, type: 3}
     characterImg: {fileID: 8216898011212056449}
     characterObject: {fileID: 4373584466638120958}
     othersToHide: {fileID: 0}
@@ -1802,28 +1802,28 @@ MonoBehaviour:
   dialogueSFX: {fileID: 727285385}
   dialogueLines:
   - speakerName: '- Bob -'
-    characterSprite: {fileID: -833857, guid: 585b41ea5894e50478ba7e972055ab43, type: 3}
+    characterSprite: {fileID: 4359006072143136779, guid: 15f559cc5a2d4a64a98df2b0556c6282, type: 3}
     characterImg: {fileID: 8216898010594462180}
-    characterObject: {fileID: 0}
+    characterObject: {fileID: 4373584465240385947}
     othersToHide: {fileID: 0}
     lineText: "Kh\xF4ng th\u1EC3 tin \u0111\u01B0\u1EE3c\u2026 m\xECnh th\u1EADt
       s\u1EF1 \u0111ang \u1EDF \u0111\xE2y sao?"
   - speakerName: '- Bob -'
-    characterSprite: {fileID: -1887181010, guid: 585b41ea5894e50478ba7e972055ab43, type: 3}
+    characterSprite: {fileID: -2647672267406016176, guid: 15f559cc5a2d4a64a98df2b0556c6282, type: 3}
     characterImg: {fileID: 8216898010594462180}
     characterObject: {fileID: 0}
     othersToHide: {fileID: 0}
     lineText: "\u0110\xF3 l\xE0...!"
   - speakerName: '- Con trai -'
-    characterSprite: {fileID: 0}
-    characterImg: {fileID: 0}
-    characterObject: {fileID: 0}
+    characterSprite: {fileID: -4853020422010852839, guid: 15f559cc5a2d4a64a98df2b0556c6282, type: 3}
+    characterImg: {fileID: 624535350169290380}
+    characterObject: {fileID: 8956210984733108297}
     othersToHide: {fileID: 4373584465240385947}
     lineText: "\u2026"
   - speakerName: '- Con trai -'
-    characterSprite: {fileID: 0}
-    characterImg: {fileID: 0}
-    characterObject: {fileID: 0}
+    characterSprite: {fileID: -4853020422010852839, guid: 15f559cc5a2d4a64a98df2b0556c6282, type: 3}
+    characterImg: {fileID: 624535350169290380}
+    characterObject: {fileID: 8956210984733108297}
     othersToHide: {fileID: 4373584465240385947}
     lineText: "\u2026Con \u0111i \u0111\xE2y."
   - speakerName: 
@@ -1832,7 +1832,7 @@ MonoBehaviour:
     characterObject: {fileID: 0}
     othersToHide: {fileID: 0}
     lineText: "<i>Bob im l\u1EB7ng, b\u01B0\u1EDBc t\u1EDBi. \xD4ng l\u1EB7ng l\u1EBD
-      \u0111\u1EB7t tay l\xEAn vai con</i>"
+      \u0111\u1EB7t tay l\xEAn vai con.</i>"
   - speakerName: '- Bob -'
     characterSprite: {fileID: -833857, guid: 585b41ea5894e50478ba7e972055ab43, type: 3}
     characterImg: {fileID: 8216898010594462180}
@@ -1846,16 +1846,16 @@ MonoBehaviour:
     othersToHide: {fileID: 0}
     lineText: "Nh\u1EDB v\u1EC1 th\u0103m nh\xE0 nh\xE9."
   - speakerName: '- Con trai -'
-    characterSprite: {fileID: 0}
-    characterImg: {fileID: 0}
-    characterObject: {fileID: 0}
+    characterSprite: {fileID: 3410015167184454596, guid: 15f559cc5a2d4a64a98df2b0556c6282, type: 3}
+    characterImg: {fileID: 624535350169290380}
+    characterObject: {fileID: 8956210984733108297}
     othersToHide: {fileID: 4373584465240385947}
     lineText: "\u2026!"
   - speakerName: '- Con trai -'
-    characterSprite: {fileID: 0}
-    characterImg: {fileID: 0}
-    characterObject: {fileID: 0}
-    othersToHide: {fileID: 0}
+    characterSprite: {fileID: 7295060775673796821, guid: 15f559cc5a2d4a64a98df2b0556c6282, type: 3}
+    characterImg: {fileID: 624535350169290380}
+    characterObject: {fileID: 8956210984733108297}
+    othersToHide: {fileID: 4373584465240385947}
     lineText: "V\xE2ng."
   - speakerName: 
     characterSprite: {fileID: 0}
@@ -1895,7 +1895,7 @@ MonoBehaviour:
   dialogueSFX: {fileID: 727285385}
   dialogueLines:
   - speakerName: '- Bob -'
-    characterSprite: {fileID: -1465249873, guid: 585b41ea5894e50478ba7e972055ab43, type: 3}
+    characterSprite: {fileID: 994891205180393040, guid: 15f559cc5a2d4a64a98df2b0556c6282, type: 3}
     characterImg: {fileID: 8216898010594462180}
     characterObject: {fileID: 0}
     othersToHide: {fileID: 0}
@@ -1924,20 +1924,20 @@ MonoBehaviour:
       m\u1EA5y \xF4ng tr\xEAn ph\u1ED1 \xE0? Tao kh\xF4ng c\xF3 th\u1EB1ng con nh\u01B0
       m\xE0y!"
   - speakerName: '- Bob -'
-    characterSprite: {fileID: -1498286058, guid: 585b41ea5894e50478ba7e972055ab43, type: 3}
+    characterSprite: {fileID: 994891205180393040, guid: 15f559cc5a2d4a64a98df2b0556c6282, type: 3}
     characterImg: {fileID: 8216898010594462180}
     characterObject: {fileID: 4373584465240385947}
     othersToHide: {fileID: 0}
     lineText: "...Kh\xF4ng\u2026 kh\xF4ng ph\u1EA3i\u2026"
   - speakerName: '- Con trai -'
-    characterSprite: {fileID: 0}
-    characterImg: {fileID: 0}
+    characterSprite: {fileID: 2676878009975171373, guid: 15f559cc5a2d4a64a98df2b0556c6282, type: 3}
+    characterImg: {fileID: 624535350169290380}
     characterObject: {fileID: 8956210984733108297}
     othersToHide: {fileID: 4373584465240385947}
     lineText: "...T\xF4i s\u1EBD kh\xF4ng bao gi\u1EDD quay l\u1EA1i n\u01A1i n\xE0y
       n\u1EEFa."
   - speakerName: '- Bob -'
-    characterSprite: {fileID: -833857, guid: 585b41ea5894e50478ba7e972055ab43, type: 3}
+    characterSprite: {fileID: 4359006072143136779, guid: 15f559cc5a2d4a64a98df2b0556c6282, type: 3}
     characterImg: {fileID: 8216898010594462180}
     characterObject: {fileID: 4373584465240385947}
     othersToHide: {fileID: 8956210984733108297}
@@ -2005,7 +2005,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 509.338, y: 92.187256}
+  m_AnchoredPosition: {x: 509.338, y: 81}
   m_SizeDelta: {x: 474.8015, y: 640.4149}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &47388630834701699
@@ -2024,7 +2024,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 509.338, y: 92.187256}
+  m_AnchoredPosition: {x: 509.338, y: 81}
   m_SizeDelta: {x: 474.8015, y: 640.4149}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &559946432899525729
@@ -2064,7 +2064,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 1467248245, guid: 585b41ea5894e50478ba7e972055ab43, type: 3}
+  m_Sprite: {fileID: -4853020422010852839, guid: 15f559cc5a2d4a64a98df2b0556c6282, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -3052,8 +3052,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -483, y: 90}
-  m_SizeDelta: {x: 599.9615, y: 613.1016}
+  m_AnchoredPosition: {x: -454.54, y: 67.624}
+  m_SizeDelta: {x: 520.8, y: 613.66}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &8056080219371465549
 GameObject:

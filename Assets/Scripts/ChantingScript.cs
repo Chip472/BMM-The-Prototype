@@ -103,8 +103,11 @@ public class ChantingScript : MonoBehaviour
         if (!check)
         {
             check = true;
-            GetComponent<PancakeManager2>().cookIntro.NextLine();
-            StartCoroutine(WaitForDialogue());
+            if (GetComponent<PancakeManager2>() != null)
+            {
+                GetComponent<PancakeManager2>().cookIntro.NextLine();
+                StartCoroutine(WaitForDialogue());
+            }
         }
 
         StartCoroutine(SuccessRoutine());
