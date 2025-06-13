@@ -26,6 +26,12 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Chapter2Dream.unity
     guid: 9b97ae63e79d7544fb7ea36974410244
+  - enabled: 1
+    path: Assets/Scenes/SampleScene.unity
+    guid: dfd6df7d0b0fb724d9c28a8e63837717
+  - enabled: 1
+    path: Assets/Scenes/SecondSampleScene.unity
+    guid: d12b8ef44e4567a47be4c20dada74494
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   m_UseUCBPForAssetBundles: 0

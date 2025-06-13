@@ -10,7 +10,7 @@ public class DragDropContrrol : MonoBehaviour
     public GameObject bot;
     private bool isOverBot = false;
 
-    public bool isOver = false;
+    public bool isPhraseOver = false;
 
     private void Start()
     {
@@ -19,7 +19,7 @@ public class DragDropContrrol : MonoBehaviour
 
     private void Update()
     {
-        if (isOver == false)
+        if (!isPhraseOver)
         {
             CheckIfOverBot();
             if (isOverBot)

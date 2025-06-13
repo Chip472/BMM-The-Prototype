@@ -1,4 +1,4 @@
-using UnityEngine;
+﻿using UnityEngine;
 
 public class SampleScript : MonoBehaviour
 {
@@ -24,5 +24,10 @@ public class SampleScript : MonoBehaviour
     public void CloseSettings()
     {
         lalalaowdl.SetActive(false);
+    }
+
+    public void NewButtonFunction()
+    {
+        Debug.Log("Vừa bấm vào nút màu tím");
     }
 }

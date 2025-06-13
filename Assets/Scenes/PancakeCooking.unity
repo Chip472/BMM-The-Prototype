@@ -14759,6 +14759,26 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 8722411922588891706}
     m_Modifications:
+    - target: {fileID: 5514690651400221571, guid: 52325d43814613c4c9c293f97a02a541, type: 3}
+      propertyPath: m_Interactable
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5514690651400221571, guid: 52325d43814613c4c9c293f97a02a541, type: 3}
+      propertyPath: m_Colors.m_DisabledColor.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5514690651400221571, guid: 52325d43814613c4c9c293f97a02a541, type: 3}
+      propertyPath: m_Colors.m_DisabledColor.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5514690651400221571, guid: 52325d43814613c4c9c293f97a02a541, type: 3}
+      propertyPath: m_Colors.m_DisabledColor.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5514690651400221571, guid: 52325d43814613c4c9c293f97a02a541, type: 3}
+      propertyPath: m_Colors.m_DisabledColor.r
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5885312322739181860, guid: 52325d43814613c4c9c293f97a02a541, type: 3}
       propertyPath: m_Name
       value: Flip

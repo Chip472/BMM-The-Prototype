@@ -42,6 +42,9 @@ public class MenuManager : MonoBehaviour
     public AudioSource letterSFX;
     public AudioSource menuTheme;
 
+    [Header("Loading Scene")]
+    public LoadingBar loadingBar;
+
     private void Awake()
     {
         if (PlayerPrefs.GetString("isStillInGame", "false") == "true")
@@ -79,39 +82,7 @@ public class MenuManager : MonoBehaviour
             prologueCanvas.SetActive(false);
             prologuePlayer.gameObject.SetActive(false);
 
-            if (PlayerPrefs.GetString("isChapter1End", "none") == "happy")
-            {
-                if (PlayerPrefs.GetString("isHappyEnd1Unlocked", "false") == "false" && PlayerPrefs.GetString("isChapter1Done", "false") == "true")
-                {
-                    PlayerPrefs.SetString("isHappyEnd1Unlocked", "true");
-                    PlayButton();
-                }
-            }
-            else if (PlayerPrefs.GetString("isChapter1End", "none") == "bad")
-            {
-                if (PlayerPrefs.GetString("isBadEnd1Unlocked", "false") == "false" && PlayerPrefs.GetString("isChapter1Done", "false") == "true")
-                {
-                    PlayerPrefs.SetString("isBadEnd1Unlocked", "true");
-                    PlayButton();
-                }
-            }
-
-            if (PlayerPrefs.GetString("isChapter2End", "none") == "happy")
-            {
-                if (PlayerPrefs.GetString("isHappyEnd2Unlocked", "false") == "false" && PlayerPrefs.GetString("isChapter2Done", "false") == "true")
-                {
-                    PlayerPrefs.SetString("isHappyEnd2Unlocked", "true");
-                    PlayButton();
-                }
-            }
-            else if (PlayerPrefs.GetString("isChapter2End", "none") == "bad")
-            {
-                if (PlayerPrefs.GetString("isBadEnd2Unlocked", "false") == "false" && PlayerPrefs.GetString("isChapter2Done", "false") == "true")
-                {
-                    PlayerPrefs.SetString("isBadEnd2Unlocked", "true");
-                    PlayButton();
-                }
-            }
+            PlayButton();
         }
 
         if (PlayerPrefs.GetString("isChapter1Done", "false") == "true")
@@ -149,9 +120,8 @@ public class MenuManager : MonoBehaviour
 
         yield return new WaitForSeconds(1f);
 
-        transiAnim.gameObject.SetActive(true);
+        loadingBar.LoadFakeScene(transiAnim.gameObject);
         blackScreen.SetActive(false);
-        menuTheme.Play();
     }
 
     // ----- MENU & BOOK -----

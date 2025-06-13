@@ -1,26 +1,29 @@
-using System.Collections;
+﻿using System.Collections;
 using UnityEngine;
-using UnityEngine.SceneManagement;
+using UnityEngine.SceneManagement; //thư viện cho các thứ liên quan đến chuyển scene
 
 public class BotTrigger : MonoBehaviour
 {
-    public DragDropContrrol dragDropControl;
+    public DragDropContrrol dragDrop;
 
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    public Animator transiAnim;
 
     public void StopWhisk()
     {
+        dragDrop.isPhraseOver = true;
         GetComponent<Animator>().speed = 1;
-        dragDropControl.isOver = true;
+        GetComponent<Animator>().SetBool("isThisSceneDone", true);
+    }
+
+    public void ChangeToNextScene()
+    {
+        transiAnim.SetBool("isSceneDone", true);
+        StartCoroutine(DelayChangeScene());
+    }
+
+    IEnumerator DelayChangeScene()
+    {
+        yield return new WaitForSeconds(1.5f);
+        SceneManager.LoadScene("SecondSampleScene");
     }
 }
